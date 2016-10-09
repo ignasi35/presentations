@@ -6,7 +6,8 @@ object Dependencies {
 
   val projectDependencies = {
     Seq(
-       "org.scalatest" %% "scalatest" % scalaTest
+      "com.h2database" % "h2" % "1.4.192"
+      , "org.scalatest" %% "scalatest" % scalaTest
     )
   }
 

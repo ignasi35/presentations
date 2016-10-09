@@ -10,7 +10,7 @@ import java.net.InetSocketAddress;
 
 public class Main {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception {
     int port = 9000;
     HttpServer httpServer = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
 

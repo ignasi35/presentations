@@ -17,7 +17,7 @@ public class Tries {
   public static <T> Try<T> to(Supplier<T> f, Consumer<T> onFailure) {
     T t = null;
     try {
-      t =f.get();
+      t = f.get();
       return new Success<>(t);
     } catch (Throwable throwable) {
       if (t != null) {
@@ -30,6 +30,6 @@ public class Tries {
       }
       return new Failure<>(throwable);
     }
-
   }
+
 }

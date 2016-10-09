@@ -5,5 +5,5 @@ import com.marimon.railways.themword.tries.Try;
 
 @FunctionalInterface
 public interface Ctlr {
-  Try<Resp> handle(Req req);
+  Resp handle(Req req);
 }

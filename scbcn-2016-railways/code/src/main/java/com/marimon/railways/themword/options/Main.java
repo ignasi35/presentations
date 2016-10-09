@@ -1,6 +1,6 @@
-package com.marimon.themword.options;
+package com.marimon.railways.themword.options;
 
-import com.marimon.themword.lists.*;
+import com.marimon.railways.themword.lists.*;
 
 public class Main {
 

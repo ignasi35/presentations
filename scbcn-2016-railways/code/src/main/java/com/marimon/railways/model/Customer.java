@@ -1,4 +1,4 @@
-package com.marimon.model;
+package com.marimon.railways.model;
 
 public class Customer {
     private final Address address;

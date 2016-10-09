@@ -1,6 +1,6 @@
-package com.marimon.railways;
+package com.marimon.sampleapp;
 
-import com.marimon.railways.impl.AppContext;
+import com.marimon.sampleapp.impl.AppContext;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 

@@ -1,4 +1,4 @@
-package com.marimon.themword.tries;
+package com.marimon.railways.themword.tries;
 
 import java.util.function.Function;
 

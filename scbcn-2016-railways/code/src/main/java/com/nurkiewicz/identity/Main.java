@@ -1,7 +1,7 @@
 package com.nurkiewicz.identity;
 
-import com.marimon.model.Address;
-import com.marimon.model.Customer;
+import com.marimon.railways.model.Address;
+import com.marimon.railways.model.Customer;
 
 import java.util.Optional;
 

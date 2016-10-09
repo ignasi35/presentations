@@ -1,4 +1,4 @@
-package com.marimon.themword.lists;
+package com.marimon.railways.themword.lists;
 
 public class Lists {
 

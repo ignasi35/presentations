@@ -1,4 +1,4 @@
-package com.marimon.themword.options;
+package com.marimon.railways.themword.options;
 
 import java.util.function.Function;
 

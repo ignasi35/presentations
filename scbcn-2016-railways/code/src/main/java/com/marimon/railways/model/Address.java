@@ -1,4 +1,4 @@
-package com.marimon.model;
+package com.marimon.railways.model;
 
 import java.util.Optional;
 

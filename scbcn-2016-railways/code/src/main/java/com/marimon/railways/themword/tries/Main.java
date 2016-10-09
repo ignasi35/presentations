@@ -1,6 +1,6 @@
-package com.marimon.themword.tries;
+package com.marimon.railways.themword.tries;
 
-import com.marimon.themword.lists.*;
+import com.marimon.railways.themword.lists.*;
 
 
 import java.util.Arrays;

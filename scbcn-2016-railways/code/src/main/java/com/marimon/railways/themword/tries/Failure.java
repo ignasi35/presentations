@@ -1,40 +1,40 @@
-package com.marimon.themword.tries;
+package com.marimon.railways.themword.tries;
 
 import java.util.function.Function;
 
 /**
  *
  */
-class Success<T> implements Try<T> {
+class Failure<T> implements Try<T> {
 
-  private T s;
+  private RuntimeException t;
 
-  Success(T s) {
-    this.s = s;
+  public Failure(Throwable t) {
+    this.t = new RuntimeException(t);
   }
 
   @Override
   public <R> Try<R> map(Function<T, R> f) {
-    return new Success<>(f.apply(s));
+    return (Try<R>) this;
   }
 
   @Override
   public <R> Try<R> flatMap(Function<T, Try<R>> f) {
-    return f.apply(s);
+    return (Try<R>) this;
   }
 
   @Override
   public T get() {
-    return s;
+    throw t;
   }
 
   @Override
   public boolean isSuccess() {
-    return true;
+    return false;
   }
 
   @Override
   public String toString() {
-    return "Success{" + "s=" + s + '}';
+    return "Failure{" + "t=" + t + '}';
   }
 }

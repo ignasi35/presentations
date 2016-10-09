@@ -1,4 +1,4 @@
-package com.marimon.themword.lists;
+package com.marimon.railways.themword.lists;
 
 import java.util.NoSuchElementException;
 import java.util.function.BiFunction;

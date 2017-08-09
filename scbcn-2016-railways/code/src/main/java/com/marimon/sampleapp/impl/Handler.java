@@ -25,14 +25,21 @@ public abstract class Handler implements HttpHandler {
   }
 
   private void writeResponse(HttpExchange httpExchange, Try<Resp> response) throws IOException {
-    try { // handles the Try<Resp>
+
+    if (response.isFailure()) {
+      try {
+        response.get();
+      } catch (Throwable e) {
+        int statusCode = handleFailure(e);
+        httpExchange.sendResponseHeaders(statusCode, 0);
+      }
+    } else {
       Resp resp = response.get();
       writeResponseHeaders(httpExchange, resp);
       writeResponseBody(httpExchange.getResponseBody(), resp);
-    } catch (Throwable e) {
-      int statusCode = handleFailure(e);
-      httpExchange.sendResponseHeaders(statusCode, 0);
     }
+
+
   }
 
   private void writeResponseHeaders(HttpExchange httpExchange, Resp resp) throws IOException {
@@ -60,4 +67,5 @@ public abstract class Handler implements HttpHandler {
       e.printStackTrace();
       return 500;
     }
-  }}
+  }
+}
